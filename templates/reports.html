@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<div class="container-fluid">
+  <div class="row">
+    {% include 'sidebar.html' %}
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 d-flex flex-column justify-content-center align-items-center">
+      <h1 class="h2 mb-5 text-center text-primary fw-bold">تقارير</h1>
+    
+      <div class="btn-toolbar mb-5">
+        <!-- Upload PDF button -->
+        <label for="upload-pdf" class="btn btn-primary">
+          <i class="bi bi-cloud-upload me-2"></i> ارفع ملف PDF
+          <input type="file" id="upload-pdf" accept=".pdf" style="display: none;">
+        </label>
+      </div>
+    </main>
+    
+    
+  </div>
+</div>
+
+{% endblock content %}

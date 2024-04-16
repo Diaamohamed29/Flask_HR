@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container-fluid">
+    <div class="row justify-content-center align-items-center vh-100">
+        <div class="col-md-6 text-center">
+            <!-- Resize the logo image -->
+            <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" class="logo img-fluid">
+            <!-- Optionally, you can add a loading message -->
+            <p class="h2 mb-5 text-center text-primary" >Loading...</p>
+            <!-- Add a spinner below the logo image -->
+            <div id="spinner" class="spinner-border text-primary mt-3" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript to redirect to the dashboard page after 10 seconds -->
+<script>
+    setTimeout(function() {
+        window.location.href = "{{ url_for('dashboard') }}";
+    }, 5000); // 10 seconds
+</script>
+{% endblock content %}

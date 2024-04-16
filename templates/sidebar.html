@@ -1,0 +1,79 @@
+
+<!--      
+<header class="navbar navbar-light sticky-top bg-light flex-md-nowrap p-2 shadow">
+  <a class="navbar-brand navbar-expand-lg col-lg-2 me-0 px-3 d-flex align-items-center" href="#">
+      <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" width="100" height="100">
+  </a>
+  
+  <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false" aria-label="عرض/إخفاء لوحة التنقل">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="navbar-nav navbar-expand-lg">
+    <div class="nav-item text-nowrap">
+      <a class="nav-link px-3 text-primary h2" href="#">تسجيل الخروج</a>
+    </div>
+  </div>
+</header> -->
+
+<div class="container-fluid">
+  <div class="row">
+    <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+      <div class="position-sticky pt-3 d-flex flex-column align-items-center">
+        <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo" width="100" height="100">
+          <ul class="nav flex-column">
+            <li class="nav-item">
+              <a class="nav-link {% if active_page == 'dashboard' %} active{% endif %}" aria-current="page" href="{{ url_for('dashboard') }}">
+                <span data-feather="home"></span>
+                الرئيسية
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link{% if active_page == 'employes' %} active{% endif %}" href="{{ url_for('employes') }}">
+                <span data-feather="file"></span>
+                الموظفين
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link{% if active_page == 'vacations' %} active{% endif %}" href="{{ url_for('vacations') }}">
+                <span data-feather="shopping-cart"></span>
+                الاجازات 
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link{% if active_page == 'missions' %} active{% endif %}" href="{{ url_for('missions') }}">
+                <span data-feather="users"></span>
+                مأموريات
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link{% if active_page == 'attendance' %} active{% endif %}" href="{{ url_for('attendance') }}">
+                <span data-feather="bar-chart-2"></span>
+                حضور وانصراف
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link{% if active_page == 'reports' %} active{% endif %}" href="{{ url_for('reports') }}">
+                <span data-feather="bar-chart-2"></span>
+                تقارير
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link{% if active_page == 'gaz' %} active{% endif %}" href="{{ url_for('gaz') }}">
+                <span data-feather="bar-chart-2"></span>
+                بنزين
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link{% if active_page == 'invoice' %} active{% endif %}" href="{{ url_for('invoice') }}">
+                <span data-feather="bar-chart-2"></span>
+                بونات
+              </a>
+            </li>
+          </ul>
+          
+        </div>
+      </nav>
+      </div>
+      </div>
+      
+ 
